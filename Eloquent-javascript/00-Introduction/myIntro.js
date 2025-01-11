@@ -1,4 +1,4 @@
-//This code was written from memory after studing the book's code "intro.js"
+//This code was written from memory after studying the book's code "intro.js"
 
 //The code below is a function that returns an arr of a range of numbers
 function range(start, end, step = 1) {
