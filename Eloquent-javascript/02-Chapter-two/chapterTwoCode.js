@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 //CONTROL FLOW
 //Conditional Execution
 // let theNumber = Number(prompt("Enter a number:"));
@@ -26,7 +35,6 @@
 
 // console.log(num);
 
-
 //Using The Break Key Word.
 // for (let current = 20; (current = current + 1); ) {
 //   if (current % 7 === 0) {
@@ -34,3 +42,18 @@
 //     break;
 //   }
 // }
+
+switch (prompt("What is the weather like outside")) {
+  case "Rainy":
+    console.log(" Bring an umbrella with you");
+    break;
+  case "Sunny":
+    console.log("Dress Lighty");
+    break;
+  case "Cloudy":
+    console.log("Go Outside");
+    break;
+  default:
+    console.log("Unknown weather Type");
+    break;
+}
