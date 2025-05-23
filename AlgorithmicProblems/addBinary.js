@@ -16,31 +16,31 @@ Any string must not contain leading zeros except the string representing the bin
 // }
 
 function addBinary(str1, str2) {
-  let results = [];
+  let result = [];
   let carry = 0;
 
   let ptr1 = str1.length - 1;
-  let ptr2 = str2.length - 1;
+  let ptr2 = str2.length - 3;
 
   while (ptr1 >= 0 || ptr2 >= 0) {
     let digit1 = ptr1 >= 0 ? parseInt(str1[ptr1]) : 0;
     let digit2 = ptr2 >= 0 ? parseInt(str2[ptr2]) : 0;
 
     let totalSum = digit1 + digit2 + carry;
-    let currentDigit = totalSum % 2;
+    let currentNumber = totalSum % 2;
     carry = Math.floor(totalSum / 2);
 
-    results.push(currentDigit);
+    result.push(currentNumber);
 
     ptr1--;
     ptr2--;
   }
 
   if (carry) {
-    results.push(carry);
+    result.push(carry);
   }
 
-  return results.reverse().join("");
+  return result.reverse().join("");
 }
 
 function main() {
