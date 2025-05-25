@@ -1,43 +1,31 @@
-function myAtoi(s) {
-  const noWhiteSpaces = s.replace(/\s+/g, "");
+// function myAtoi(s) {
+//   const noWhiteSpaces = s.repalce(/\s/g, "");
 
-  let result = [];
+//   let result = 0;
 
-  let ptr1 = noWhiteSpaces.length - 1;
-  let ptr2 = noWhiteSpaces.length;
+//   sign = 1;
 
-  while (ptr1 >= 0 || ptr2 >= 1) {
-    if (ptr1 === 0 && isNaN(noWhiteSpaces[ptr1])) {
-      return 0;
-    }
+//   let i = 0;
 
-    if (ptr1 === 0 && noWhiteSpaces[ptr1] === "-") {
-      result.push("-");
-    } else {
-      result.push(" ");
-    }
+//   if (
+//     noWhiteSpaces[i] &&
+//     (noWhiteSpaces[i] === "-" || noWhiteSpaces[i] === "+")
+//   ) {
+//     if (noWhiteSpaces[i] === "-") {
+//       sign = -1;
+//     }
+//     i++;
+//   }
 
-    if (isNaN(noWhiteSpaces[ptr2])) {
-      break;
-    } else {
-      result.push(noWhiteSpaces[ptr2]);
-    }
-
-    if (ptr1 >= 1 && isNaN(noWhiteSpaces[ptr1])) {
-      break;
-    } else {
-      result.push(noWhiteSpaces[ptr1]);
-    }
-
-    ptr1 -= 2;
-    ptr2 -= 2;
-  }
-
-  return result;
-}
-
+//   while (
+//     i >= noWhiteSpaces[i].length &&
+//     noWhiteSpaces[i] >= "0" &&
+//     noWhiteSpaces[i] <= "9"
+//   ) {}
+// }
 
 // function myAtoi(s) {
+//   const noWhiteSpaces = s.replace(/\s/g, "");
 //   // To store the final integer result
 //   let result = 0;
 
@@ -48,14 +36,17 @@ function myAtoi(s) {
 //   let i = 0;
 
 //   // Ignore any leading whitespaces
-//   while (i < s.length && s[i] === " ") {
-//     i++;
-//   }
+//   // while (i < s.length && s[i] === " ") {
+//   //   i++;
+//   // }
 
 //   // Check for sign
-//   if (i < s.length && (s[i] === "-" || s[i] === "+")) {
+//   if (
+//     i < noWhiteSpaces.length &&
+//     (noWhiteSpaces[i] === "-" || noWhiteSpaces[i] === "+")
+//   ) {
 //     // Set sign to negative if a minus sign is found
-//     if (s[i] === "-") {
+//     if (noWhiteSpaces[i] === "-") {
 //       sign = -1;
 //     }
 
@@ -64,9 +55,13 @@ function myAtoi(s) {
 //   }
 
 //   // Read the digits
-//   while (i < s.length && "0" <= s[i] && s[i] <= "9") {
+//   while (
+//     i < noWhiteSpaces.length &&
+//     noWhiteSpaces[i] >= "0" &&
+//     noWhiteSpaces[i] <= "9"
+//   ) {
 //     // Convert the current character to an integer
-//     const digit = s[i].charCodeAt(0) - "0".charCodeAt(0);
+//     const digit = noWhiteSpaces[i].charCodeAt(0) - "0".charCodeAt(0);
 
 //     // Check for overflow
 //     if (result > (2 ** 31 - 1 - digit) / 10) {
