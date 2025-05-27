@@ -20,7 +20,7 @@ function addBinary(str1, str2) {
   let carry = 0;
 
   let ptr1 = str1.length - 1;
-  let ptr2 = str2.length - 3;
+  let ptr2 = str2.length - 1;
 
   while (ptr1 >= 0 || ptr2 >= 0) {
     let digit1 = ptr1 >= 0 ? parseInt(str1[ptr1]) : 0;
